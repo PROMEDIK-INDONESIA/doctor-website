@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react'
 import Script from "next/script";
-import { PromedikGreen, PromedikWhite } from "@/app/assets/colors";
+import { PromedikGreen } from "@/app/assets/colors";
 
 function BookingAppointment() {
   const containerRef = useRef<HTMLDivElement>(null);

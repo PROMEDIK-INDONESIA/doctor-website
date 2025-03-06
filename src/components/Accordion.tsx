@@ -1,12 +1,22 @@
 'use client'
 
-// import { PromedikGreen, PromedikWhite } from "@/app/assets/colors";
+import { PromedikGreen, PromedikWhite } from "@/app/assets/colors";
 import { useState } from "react";
 
-const Accordion = ({ items }: any) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+interface AccordionItem {
+  title: string;
+  content: string;
+}
 
-  const toggleItem = (index: any) => {
+interface AccordionProps {
+  items: AccordionItem[];
+}
+
+
+const Accordion = ({ items }: AccordionProps) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleItem = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
@@ -18,9 +28,9 @@ const Accordion = ({ items }: any) => {
           <div
             style={{
               border: `1px solid`,
-              borderColor: activeIndex === index ? '#45959B' : "#45959B",
-              backgroundColor: activeIndex === index ? '#45959B' : "#FFFFFF",
-              color: activeIndex === index ? '#FFFFFF' : "#45959B"
+              borderColor: PromedikGreen,
+              backgroundColor: activeIndex === index ? PromedikGreen : PromedikWhite,
+              color: activeIndex === index ? PromedikWhite : PromedikGreen
             }}
             className="border rounded-lg p-4 flex justify-between items-center cursor-pointer transition-all"
             onClick={() => toggleItem(index)}
@@ -28,7 +38,7 @@ const Accordion = ({ items }: any) => {
             <span
               className="font-medium text-left flex-10"
               style={{
-                color: activeIndex === index ? '#FFFFFF' : "#45959B"
+                color: activeIndex === index ? PromedikWhite : PromedikGreen
               }}
             >
               {item.title}
@@ -36,7 +46,7 @@ const Accordion = ({ items }: any) => {
             <div className="flex-1 flex justify-end">
               <svg
                 style={{
-                  color: activeIndex === index ? '#FFFFFF' : "#45959B"
+                  color: activeIndex === index ? PromedikWhite : PromedikGreen
                 }}
                 className={`w-5 h-5 transition-transform ${activeIndex === index ? "rotate-180" : "rotate-0"
                   }`}

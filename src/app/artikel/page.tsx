@@ -1,4 +1,4 @@
-import { PromedikGreen, PromedikWhite } from "@/app/assets/colors";
+import { PromedikGreen } from "@/app/assets/colors";
 
 const Artikel = () => {
   const dummy_image = [
