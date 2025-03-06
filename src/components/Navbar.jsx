@@ -65,7 +65,7 @@ function Navbar({ isOpen, setIsOpen }) {
         {/* Desktop Menu */}
         <div className='max-md:hidden flex flex-row justify-start items-center gap-5'>
           {[
-            { name: "Home", path: process.env.NODE_ENV === "production" ? "/doctors-personal-website/" : "/" },
+            { name: "Home", path: "/" },
             { name: "Articles", path: "/artikel" },
             { name: "FAQ", path: "/faq" }
           ].map((item, i) => (
