@@ -1,4 +1,5 @@
 import { PromedikGreen } from "@/app/assets/colors";
+import Image from "next/image";
 
 const Artikel = () => {
   const dummy_image = [
@@ -29,12 +30,13 @@ const Artikel = () => {
         </div>
       </div>
       <div className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-10">
-        {dummy_image.map((image, i) => {
+        {dummy_image.map((image: string, i: number) => {
           return (
             <div key={i} className="flex flex-col gap-2">
-              <img
+              <Image
                 className="w-100 aspect-3/2 object-cover"
                 src={image}
+                alt="dummy artikel thumbnail"
               />
               <div style={{ color: PromedikGreen }} className="flex items-start text-[10px] font-bold">
                 AKUPUNKTUR

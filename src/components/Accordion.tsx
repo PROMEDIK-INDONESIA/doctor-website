@@ -22,7 +22,7 @@ const Accordion = ({ items }: AccordionProps) => {
 
   return (
     <div className="w-full relative">
-      {items.map((item: any, index: any) => (
+      {items.map((item: AccordionItem, index: number) => (
         <div key={index} className="relative mb-2">
           {/* Header - Background changes here */}
           <div
