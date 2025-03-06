@@ -34,7 +34,7 @@ function Sidebar({ isOpen, setIsOpen }) {
         {/* Menu List */}
         <ul className="mt-1 space-y-3">
           {[
-            { name: "Home", path: process.env.NODE_ENV === "production" ? "/doctors-personal-website/" : "/" },
+            { name: "Home", path: "/" },
             { name: "Articles", path: "/artikel" },
             { name: "FAQ", path: "/faq" }
           ].map((item) => (
