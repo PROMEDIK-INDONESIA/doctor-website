@@ -34,9 +34,12 @@ const Artikel = () => {
           return (
             <div key={i} className="flex flex-col gap-2">
               <Image
+                width={500}
+                height={500}
                 className="w-100 aspect-3/2 object-cover"
                 src={image}
                 alt="dummy artikel thumbnail"
+                unoptimized
               />
               <div style={{ color: PromedikGreen }} className="flex items-start text-[10px] font-bold">
                 AKUPUNKTUR
